@@ -28,4 +28,16 @@
 .cal-day.selected{transform:scale(1.04)}
 .memory-pop{animation:memoryPop .45s cubic-bezier(.2,.8,.3,1)}
 @keyframes memoryPop{0%{opacity:0;transform:scale(.9)}60%{opacity:1;transform:scale(1.02)}100%{transform:scale(1)}}
+.garden-grid{display:grid;grid-template-columns:repeat(7,1fr);gap:6px;margin:14px 0}
+.garden-cell{aspect-ratio:1;border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:19px;background:#f3f7f2;border:1px solid #e4ebe4}
+.garden-cell.garden-empty{background:#f7f9f6}
+.garden-cell.garden-seed{background:#fdf6e9}
+.garden-cell.garden-sprout{background:#eef8f0}
+.garden-cell.garden-bloom{background:#eaf7ee;font-size:22px}
+.breathing-modal{text-align:center}
+.breathe-stage{display:flex;align-items:center;justify-content:center;height:220px;margin:14px 0}
+.breathe-circle{width:120px;height:120px;border-radius:50%;background:radial-gradient(circle at 35% 30%,#8fd6b3,#2f7d5c);display:flex;align-items:center;justify-content:center;color:#fff;font-size:13px;font-weight:600;text-align:center;padding:10px;transform:scale(1);transition:transform 4s ease-in-out}
+.breathe-circle.in{transform:scale(1.65);transition-duration:4s}
+.breathe-circle.hold{transform:scale(1.65);transition-duration:2s}
+.breathe-circle.out{transform:scale(1);transition-duration:4s}
 @media(prefers-reduced-motion:reduce){.toast{transition:none}.step-pop,.memory-pop{animation:none}.mood-pick-opt,.cal-day{transition:none}}
